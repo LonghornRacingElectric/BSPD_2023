@@ -1,0 +1,3 @@
+[submodule "2023KicadLibrary"]
+	path = 2023KicadLibrary
+	url = https://github.com/LonghornRacingElectric/2023KicadLibrary.git
