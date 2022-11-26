@@ -1,0 +1,599 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 10
+Title "BSPD Dual Window Comparator Array"
+Date "2021-01-18"
+Rev "2"
+Comp "Longhorn Racing Electric"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 5550 4925 0    50   Input ~ 0
+DataRaw_In
+Wire Wire Line
+	5550 4925 5900 4925
+$Comp
+L power:+5V #PWR047
+U 1 1 6015D755
+P 1200 6675
+AR Path="/5D979E33/6015D755" Ref="#PWR047"  Part="1" 
+AR Path="/600F7F10/6015D755" Ref="#PWR?"  Part="1" 
+AR Path="/600F8493/6015D755" Ref="#PWR?"  Part="1" 
+AR Path="/600F8912/6015D755" Ref="#PWR?"  Part="1" 
+F 0 "#PWR047" H 1200 6525 50  0001 C CNN
+F 1 "+5V" H 1215 6848 50  0000 C CNN
+F 2 "" H 1200 6675 50  0001 C CNN
+F 3 "" H 1200 6675 50  0001 C CNN
+	1    1200 6675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR050
+U 1 1 6015D756
+P 1425 7275
+AR Path="/5D979E33/6015D756" Ref="#PWR050"  Part="1" 
+AR Path="/600F7F10/6015D756" Ref="#PWR?"  Part="1" 
+AR Path="/600F8493/6015D756" Ref="#PWR?"  Part="1" 
+AR Path="/600F8912/6015D756" Ref="#PWR?"  Part="1" 
+F 0 "#PWR050" H 1425 7025 50  0001 C CNN
+F 1 "GND" H 1430 7102 50  0000 C CNN
+F 2 "" H 1425 7275 50  0001 C CNN
+F 3 "" H 1425 7275 50  0001 C CNN
+	1    1425 7275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R31
+U 1 1 6015D757
+P 6800 4775
+AR Path="/5D979E33/6015D757" Ref="R31"  Part="1" 
+AR Path="/600F7F10/6015D757" Ref="R?"  Part="1" 
+AR Path="/600F8493/6015D757" Ref="R?"  Part="1" 
+AR Path="/600F8912/6015D757" Ref="R?"  Part="1" 
+F 0 "R31" H 6730 4729 50  0000 R CNN
+F 1 "10k" H 6730 4820 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6730 4775 50  0001 C CNN
+F 3 "~" H 6800 4775 50  0001 C CNN
+F 4 "RES SMD 10K OHM 1% 0603 " V 6800 4775 50  0001 C CNN "Description"
+F 5 "0603" V 6800 4775 50  0001 C CNN "Package"
+F 6 "." V 6800 4775 50  0001 C CNN "Manufacturer"
+F 7 "." V 6800 4775 50  0001 C CNN "Part Number"
+F 8 "" V 6800 4775 50  0001 C CNN "Notes"
+	1    6800 4775
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6500 5325 6500 4925
+Wire Wire Line
+	6500 4925 6800 4925
+Connection ~ 6500 4925
+$Comp
+L power:+5V #PWR043
+U 1 1 6007D41B
+P 6800 4625
+AR Path="/5D979E33/6007D41B" Ref="#PWR043"  Part="1" 
+AR Path="/600F7F10/6007D41B" Ref="#PWR?"  Part="1" 
+AR Path="/600F8493/6007D41B" Ref="#PWR?"  Part="1" 
+AR Path="/600F8912/6007D41B" Ref="#PWR?"  Part="1" 
+F 0 "#PWR043" H 6800 4475 50  0001 C CNN
+F 1 "+5V" H 6815 4798 50  0000 C CNN
+F 2 "" H 6800 4625 50  0001 C CNN
+F 3 "" H 6800 4625 50  0001 C CNN
+	1    6800 4625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 4925 7400 4925
+Connection ~ 6800 4925
+Text Notes 8175 6050 0    100  ~ 20
+Connected Signal
+Wire Notes Line
+	10975 950  10975 6200
+Wire Notes Line
+	925  900  925  6150
+Text HLabel 7400 4925 2    50   Output ~ 0
+Signal_Connected
+Text Notes 8075 3625 0    100  ~ 20
+Active Signal\n
+Text Notes 2425 1325 0    100  ~ 0
+Vref H: 4V\n
+Text Notes 2475 3575 0    100  ~ 0
+Vref L: 3V\n
+Text Notes 2475 4025 0    100  ~ 0
+Vref H: 4V\n
+Text Notes 2450 6025 0    100  ~ 0
+Vref L: 1V\n
+Text Notes 8125 3925 0    100  ~ 20
+Output Behavior\n
+Text Notes 8125 4225 0    79   ~ 0
+DataRaw_In < 1V............. 0V\n\n
+Text Notes 8125 4375 0    79   ~ 0
+1V < DataRaw_In < 4V... 5V\n\n
+Text Notes 8125 4525 0    79   ~ 0
+DataRaw_In > 4V............. 0V\n\n
+Text Notes 7925 1375 0    100  ~ 20
+Output Behavior\n
+Text Notes 1150 1075 0    100  Italic 20
+BMS Config
+Wire Notes Line
+	10675 900  10675 6150
+Wire Notes Line
+	925  6150 10675 6150
+Wire Notes Line
+	925  900  10675 900 
+Wire Notes Line
+	925  3725 10675 3725
+Text Notes 9625 1075 0    50   ~ 0
+Assuming 10% open = 1V\n
+Text Notes 7950 1650 0    79   ~ 0
+DataRaw_In < 3V............. 0V\n\n
+Text Notes 7950 1800 0    79   ~ 0
+3V < DataRaw_In < 4V... 5V\n\n
+Text Notes 7950 1950 0    79   ~ 0
+DataRaw_In > 4V............. 0V\n\n
+Wire Notes Line
+	925  1100 10675 1100
+$Comp
+L power:GND #PWR048
+U 1 1 60159A4E
+P 950 6975
+AR Path="/5D979E33/60159A4E" Ref="#PWR048"  Part="1" 
+AR Path="/600F7F10/60159A4E" Ref="#PWR?"  Part="1" 
+AR Path="/600F8493/60159A4E" Ref="#PWR?"  Part="1" 
+AR Path="/600F8912/60159A4E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR048" H 950 6725 50  0001 C CNN
+F 1 "GND" H 955 6802 50  0000 C CNN
+F 2 "" H 950 6975 50  0001 C CNN
+F 3 "" H 950 6975 50  0001 C CNN
+	1    950  6975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  6675 1200 6675
+Connection ~ 1200 6675
+Wire Wire Line
+	1200 6675 1425 6675
+$Comp
+L Device:C C?
+U 1 1 6021F13D
+P 950 6825
+AR Path="/5D9A6D3A/6021F13D" Ref="C?"  Part="1" 
+AR Path="/5D979E33/6021F13D" Ref="C8"  Part="1" 
+F 0 "C8" H 1065 6871 50  0000 L CNN
+F 1 "0.1uF" H 1065 6780 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 988 6675 50  0001 C CNN
+F 3 "~" H 950 6825 50  0001 C CNN
+F 4 "." H 950 6825 50  0001 C CNN "Manufacturer"
+F 5 "." H 950 6825 50  0001 C CNN "Part Number"
+F 6 "CAP CER 0.1UF 25V X7R 0603" H 950 6825 50  0001 C CNN "Description"
+F 7 "0603" H 950 6825 50  0001 C CNN "Package"
+	1    950  6825
+	1    0    0    -1  
+$EndComp
+$Comp
+L Comparator:LM339 U5
+U 5 1 60277528
+P 1525 6975
+AR Path="/5D979E33/60277528" Ref="U5"  Part="5" 
+AR Path="/600F7F10/60277528" Ref="U?"  Part="5" 
+AR Path="/600F8493/60277528" Ref="U?"  Part="5" 
+AR Path="/600F8912/60277528" Ref="U?"  Part="5" 
+F 0 "U5" H 1483 7021 50  0000 L CNN
+F 1 "LM239" H 1483 6930 50  0000 L CNN
+F 2 "Package_SO:SO-14_3.9x8.65mm_P1.27mm" H 1475 7075 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/lm139.pdf" H 1575 7175 50  0001 C CNN
+F 4 "IC COMP QUAD LOW PWR 14SOIC" H 1525 6975 50  0001 C CNN "Description"
+F 5 "STMicroelectronics" H 1525 6975 50  0001 C CNN "Manufacturer"
+F 6 "LM239DT" H 1525 6975 50  0001 C CNN "Part Number"
+F 7 "14-SOIC" H 1525 6975 50  0001 C CNN "Package"
+	5    1525 6975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R34
+U 1 1 607C2D68
+P 2475 6900
+AR Path="/5D979E33/607C2D68" Ref="R34"  Part="1" 
+AR Path="/600F7F10/607C2D68" Ref="R?"  Part="1" 
+AR Path="/600F8493/607C2D68" Ref="R?"  Part="1" 
+AR Path="/600F8912/607C2D68" Ref="R?"  Part="1" 
+F 0 "R34" H 2405 6854 50  0000 R CNN
+F 1 "510k" H 2405 6945 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2405 6900 50  0001 C CNN
+F 3 "~" H 2475 6900 50  0001 C CNN
+F 4 "RES SMD 510K OHM 1% 0603 " V 2475 6900 50  0001 C CNN "Description"
+F 5 "0603" V 2475 6900 50  0001 C CNN "Package"
+F 6 "." V 2475 6900 50  0001 C CNN "Manufacturer"
+F 7 "." V 2475 6900 50  0001 C CNN "Part Number"
+	1    2475 6900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR049
+U 1 1 607C2D6E
+P 2650 7050
+AR Path="/5D979E33/607C2D6E" Ref="#PWR049"  Part="1" 
+AR Path="/600F7F10/607C2D6E" Ref="#PWR?"  Part="1" 
+AR Path="/600F8493/607C2D6E" Ref="#PWR?"  Part="1" 
+AR Path="/600F8912/607C2D6E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR049" H 2650 6800 50  0001 C CNN
+F 1 "GND" H 2655 6877 50  0000 C CNN
+F 2 "" H 2650 7050 50  0001 C CNN
+F 3 "" H 2650 7050 50  0001 C CNN
+	1    2650 7050
+	1    0    0    -1  
+$EndComp
+Text HLabel 2475 6750 0    50   Input ~ 0
+DataRaw_In
+$Comp
+L Device:C C?
+U 1 1 6093BBED
+P 2825 6900
+AR Path="/5D9A6D3A/6093BBED" Ref="C?"  Part="1" 
+AR Path="/5D979E33/6093BBED" Ref="C9"  Part="1" 
+F 0 "C9" H 2940 6946 50  0000 L CNN
+F 1 "0.1uF" H 2940 6855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2863 6750 50  0001 C CNN
+F 3 "~" H 2825 6900 50  0001 C CNN
+F 4 "." H 2825 6900 50  0001 C CNN "Manufacturer"
+F 5 "." H 2825 6900 50  0001 C CNN "Part Number"
+F 6 "CAP CER 0.1UF 25V X7R 0603" H 2825 6900 50  0001 C CNN "Description"
+F 7 "0603" H 2825 6900 50  0001 C CNN "Package"
+	1    2825 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2475 6750 2825 6750
+Wire Wire Line
+	2825 7050 2650 7050
+Connection ~ 2650 7050
+Wire Wire Line
+	2650 7050 2475 7050
+$Comp
+L Device:R_POT_TRIM RV33
+U 1 1 618E34AC
+P 4200 5650
+F 0 "RV33" V 4100 5700 50  0000 R CNN
+F 1 "R_POT_TRIM_10k" V 4000 5700 50  0000 R CNN
+F 2 "" H 4200 5650 50  0001 C CNN
+F 3 "~" H 4200 5650 50  0001 C CNN
+	1    4200 5650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 618E3CAC
+P 3950 5650
+F 0 "#PWR?" H 3950 5400 50  0001 C CNN
+F 1 "GND" H 3955 5477 50  0000 C CNN
+F 2 "" H 3950 5650 50  0001 C CNN
+F 3 "" H 3950 5650 50  0001 C CNN
+	1    3950 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV32
+U 1 1 618EA5E6
+P 4200 5250
+F 0 "RV32" V 4100 5300 50  0000 R CNN
+F 1 "R_POT_TRIM__40.2k" V 4000 5850 50  0000 R CNN
+F 2 "" H 4200 5250 50  0001 C CNN
+F 3 "~" H 4200 5250 50  0001 C CNN
+	1    4200 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 618EAD79
+P 3950 5250
+F 0 "#PWR?" H 3950 5100 50  0001 C CNN
+F 1 "+5V" H 3965 5423 50  0000 C CNN
+F 2 "" H 3950 5250 50  0001 C CNN
+F 3 "" H 3950 5250 50  0001 C CNN
+	1    3950 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 5250 4050 5250
+$Comp
+L Comparator:LM339 U5
+U 4 1 618FAF51
+P 6200 5350
+F 0 "U5" H 6200 5717 50  0000 C CNN
+F 1 "LM239" H 6200 5626 50  0000 C CNN
+F 2 "Package_SO:SO-14_3.9x8.65mm_P1.27mm" H 6150 5450 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/lm139.pdf" H 6250 5550 50  0001 C CNN
+F 4 "IC COMP QUAD LOW PWR 14SOIC" H 6200 5350 50  0001 C CNN "Description"
+F 5 "STMicroelectronics" H 6200 5350 50  0001 C CNN "Manufacturer"
+F 6 "LM239DT" H 6200 5350 50  0001 C CNN "Part Number"
+F 7 "14-SOIC" H 6200 5350 50  0001 C CNN "Package"
+	4    6200 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 5450 4200 5450
+Wire Wire Line
+	4200 5450 4200 5400
+Wire Wire Line
+	4200 5500 4200 5450
+Connection ~ 4200 5450
+Wire Wire Line
+	3950 5650 4050 5650
+$Comp
+L Comparator:LM339 U5
+U 3 1 61904BAF
+P 6200 4550
+F 0 "U5" H 6200 4917 50  0000 C CNN
+F 1 "LM239" H 6200 4826 50  0000 C CNN
+F 2 "Package_SO:SO-14_3.9x8.65mm_P1.27mm" H 6150 4650 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/lm139.pdf" H 6250 4750 50  0001 C CNN
+F 4 "IC COMP QUAD LOW PWR 14SOIC" H 6200 4550 50  0001 C CNN "Description"
+F 5 "STMicroelectronics" H 6200 4550 50  0001 C CNN "Manufacturer"
+F 6 "LM239DT" H 6200 4550 50  0001 C CNN "Part Number"
+F 7 "14-SOIC" H 6200 4550 50  0001 C CNN "Package"
+	3    6200 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6190A925
+P 3950 4200
+F 0 "#PWR?" H 3950 4050 50  0001 C CNN
+F 1 "+5V" H 3965 4373 50  0000 C CNN
+F 2 "" H 3950 4200 50  0001 C CNN
+F 3 "" H 3950 4200 50  0001 C CNN
+	1    3950 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV29
+U 1 1 6190AF84
+P 4250 4200
+F 0 "RV29" V 4150 4250 50  0000 R CNN
+F 1 "R_POT_TRIM_10k" V 4050 4700 50  0000 R CNN
+F 2 "" H 4250 4200 50  0001 C CNN
+F 3 "~" H 4250 4200 50  0001 C CNN
+	1    4250 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 4200 4100 4200
+$Comp
+L Device:R_POT_TRIM RV30
+U 1 1 61912DCB
+P 4250 4650
+F 0 "RV30" V 4150 4700 50  0000 R CNN
+F 1 "R_POT_TRIM_40.2k" V 4050 4700 50  0000 R CNN
+F 2 "" H 4250 4650 50  0001 C CNN
+F 3 "~" H 4250 4650 50  0001 C CNN
+	1    4250 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61913518
+P 3950 4650
+F 0 "#PWR?" H 3950 4400 50  0001 C CNN
+F 1 "GND" H 3955 4477 50  0000 C CNN
+F 2 "" H 3950 4650 50  0001 C CNN
+F 3 "" H 3950 4650 50  0001 C CNN
+	1    3950 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 4650 4100 4650
+Wire Wire Line
+	4250 4350 4250 4450
+Wire Wire Line
+	6500 4550 6500 4925
+Wire Wire Line
+	5900 4650 5900 4925
+Connection ~ 5900 4925
+Wire Wire Line
+	5900 4925 5900 5250
+Wire Wire Line
+	5900 4450 4250 4450
+Connection ~ 4250 4450
+Wire Wire Line
+	4250 4450 4250 4500
+$Comp
+L power:GND #PWR?
+U 1 1 619296A1
+P 3900 3150
+F 0 "#PWR?" H 3900 2900 50  0001 C CNN
+F 1 "GND" H 3905 2977 50  0000 C CNN
+F 2 "" H 3900 3150 50  0001 C CNN
+F 3 "" H 3900 3150 50  0001 C CNN
+	1    3900 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV28
+U 1 1 61929267
+P 4200 3150
+F 0 "RV28" V 4100 3200 50  0000 R CNN
+F 1 "R_POT_TRIM_30.1k" V 4000 3200 50  0000 R CNN
+F 2 "" H 4200 3150 50  0001 C CNN
+F 3 "~" H 4200 3150 50  0001 C CNN
+	1    4200 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV27
+U 1 1 6192FBBE
+P 4200 2700
+F 0 "RV27" V 4100 2800 50  0000 R CNN
+F 1 "R_POT_TRIM_20k" V 4000 3250 50  0000 R CNN
+F 2 "" H 4200 2700 50  0001 C CNN
+F 3 "~" H 4200 2700 50  0001 C CNN
+	1    4200 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 6192F6BC
+P 3900 2700
+F 0 "#PWR?" H 3900 2550 50  0001 C CNN
+F 1 "+5V" H 3915 2873 50  0000 C CNN
+F 2 "" H 3900 2700 50  0001 C CNN
+F 3 "" H 3900 2700 50  0001 C CNN
+	1    3900 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2700 4050 2700
+Wire Wire Line
+	3900 3150 4050 3150
+$Comp
+L Comparator:LM339 U5
+U 1 1 6193B0E9
+P 6150 2850
+F 0 "U5" H 6150 3217 50  0000 C CNN
+F 1 "LM239" H 6150 3126 50  0000 C CNN
+F 2 "Package_SO:SO-14_3.9x8.65mm_P1.27mm" H 6100 2950 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/lm139.pdf" H 6200 3050 50  0001 C CNN
+F 4 "STMicroelectronics" H 6150 2850 50  0001 C CNN "Manufacturer"
+F 5 "LM239DT" H 6150 2850 50  0001 C CNN "Part Number"
+F 6 "IC COMP QUAD LOW PWR 14SOIC" H 6150 2850 50  0001 C CNN "Description"
+F 7 "14-SOIC" H 6150 2850 50  0001 C CNN "Package"
+	1    6150 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2850 4200 2950
+Wire Wire Line
+	5850 2950 4200 2950
+Connection ~ 4200 2950
+Wire Wire Line
+	4200 2950 4200 3000
+Text HLabel 5500 2450 0    50   Input ~ 0
+DataRaw_In
+Wire Wire Line
+	5750 2750 5850 2750
+Wire Wire Line
+	5500 2450 5750 2450
+Wire Wire Line
+	5750 2450 5750 2750
+$Comp
+L Comparator:LM339 U5
+U 2 1 6193BE12
+P 6150 2000
+F 0 "U5" H 6150 2367 50  0000 C CNN
+F 1 "LM239" H 6150 2276 50  0000 C CNN
+F 2 "Package_SO:SO-14_3.9x8.65mm_P1.27mm" H 6100 2100 50  0001 C CNN
+F 3 "https://www.st.com/resource/en/datasheet/lm139.pdf" H 6200 2200 50  0001 C CNN
+F 4 "IC COMP QUAD LOW PWR 14SOIC" H 6150 2000 50  0001 C CNN "Description"
+F 5 "STMicroelectronics" H 6150 2000 50  0001 C CNN "Manufacturer"
+F 6 "LM239DT" H 6150 2000 50  0001 C CNN "Part Number"
+F 7 "14-SOIC" H 6150 2000 50  0001 C CNN "Package"
+	2    6150 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV24
+U 1 1 61954ADB
+P 4200 1650
+F 0 "RV24" V 4100 1800 50  0000 R CNN
+F 1 "R_POT_TRIM_10k" V 4000 2200 50  0000 R CNN
+F 2 "" H 4200 1650 50  0001 C CNN
+F 3 "~" H 4200 1650 50  0001 C CNN
+	1    4200 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61954FD3
+P 3900 1650
+F 0 "#PWR?" H 3900 1500 50  0001 C CNN
+F 1 "+5V" H 3915 1823 50  0000 C CNN
+F 2 "" H 3900 1650 50  0001 C CNN
+F 3 "" H 3900 1650 50  0001 C CNN
+	1    3900 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV25
+U 1 1 6195A25B
+P 4200 2150
+F 0 "RV25" V 4100 2250 50  0000 R CNN
+F 1 "R_POT_TRIM_40.2k" V 4000 2250 50  0000 R CNN
+F 2 "" H 4200 2150 50  0001 C CNN
+F 3 "~" H 4200 2150 50  0001 C CNN
+	1    4200 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6195A646
+P 3900 2150
+F 0 "#PWR?" H 3900 1900 50  0001 C CNN
+F 1 "GND" H 3905 1977 50  0000 C CNN
+F 2 "" H 3900 2150 50  0001 C CNN
+F 3 "" H 3900 2150 50  0001 C CNN
+	1    3900 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 2100 5750 2100
+Wire Wire Line
+	5750 2100 5750 2450
+Connection ~ 5750 2450
+Wire Wire Line
+	4200 1800 4200 1900
+Wire Wire Line
+	5850 1900 4200 1900
+Connection ~ 4200 1900
+Wire Wire Line
+	4200 1900 4200 2000
+Wire Wire Line
+	3900 1650 4050 1650
+Wire Wire Line
+	3900 2150 4050 2150
+Wire Wire Line
+	6450 2000 6550 2000
+Wire Wire Line
+	6550 2850 6450 2850
+Wire Wire Line
+	6550 2000 6550 2450
+Text HLabel 7300 2450 2    50   Output ~ 0
+Signal_Active
+$Comp
+L Device:R R26
+U 1 1 61968B63
+P 6850 2200
+F 0 "R26" H 6920 2246 50  0000 L CNN
+F 1 "10k" H 6920 2155 50  0000 L CNN
+F 2 "" V 6780 2200 50  0001 C CNN
+F 3 "~" H 6850 2200 50  0001 C CNN
+	1    6850 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61969053
+P 6850 2000
+F 0 "#PWR?" H 6850 1850 50  0001 C CNN
+F 1 "+5V" H 6865 2173 50  0000 C CNN
+F 2 "" H 6850 2000 50  0001 C CNN
+F 3 "" H 6850 2000 50  0001 C CNN
+	1    6850 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 2000 6850 2050
+Wire Wire Line
+	6550 2450 6850 2450
+Wire Wire Line
+	6850 2450 6850 2350
+Connection ~ 6550 2450
+Wire Wire Line
+	6550 2450 6550 2850
+Wire Wire Line
+	6850 2450 7300 2450
+Connection ~ 6850 2450
+$EndSCHEMATC

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "20-ELC-2-01-R1(Appetizer)-rescue")(type "Legacy")(uri "${KIPRJMOD}/20-ELC-2-01-R1(Appetizer)-rescue.lib")(options "")(descr ""))
+  (lib (name "20-ELC-2-01-R2(Appetizer)-rescue")(type "Legacy")(uri "${KIPRJMOD}/20-ELC-2-01-R2(Appetizer)-rescue.lib")(options "")(descr ""))
+)
