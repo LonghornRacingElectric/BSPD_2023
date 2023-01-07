@@ -706,7 +706,7 @@
   (symbol (lib_id "Device:R") (at 127 105.41 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c853fc45-174a-4c10-8246-7c03333c9357)
-    (property "Reference" "R55" (id 0) (at 129.54 105.41 90))
+    (property "Reference" "R57" (id 0) (at 129.54 105.41 90))
     (property "Value" "470R" (id 1) (at 132.08 105.41 90))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (id 2) (at 128.778 105.41 90)
       (effects (font (size 1.27 1.27)) hide)
