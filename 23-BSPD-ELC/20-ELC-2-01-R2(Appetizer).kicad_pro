@@ -488,6 +488,10 @@
       "24 to 5V Step Down"
     ],
     [
+      "31c38a8e-0df8-447f-8ced-31b276bf91f9",
+      "Watchdog"
+    ],
+    [
       "5eef7685-46e3-4490-b1c3-d367d5bf00e5",
       "BUCK"
     ],
